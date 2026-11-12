@@ -5,8 +5,7 @@ and it reports the algorithm choices that make **algorithm-confusion and
 key-substitution attacks** possible — then prints a working forgery so you can
 prove the finding instead of arguing about it.
 
-No dependencies, no network required for the demo, and no private key material
-anywhere in the repo.
+No dependencies, no network required.
 
 ```text
 $ alg-audit jwks fixtures/jwks_weak.json
@@ -206,16 +205,3 @@ python -m unittest discover -s tests -v
 python tools/make_fixtures.py
 ```
 
-## What this does *not* do
-
-- It does not validate a token's signature against a trusted key, replay state,
-  issuer configuration, or revocation list.
-- It cannot tell whether your verifier actually contains the confusion bug — it
-  tells you the inputs that would trigger it.
-- Key-size rules are policy (RFC 7518/8301), not a statement that a 1024-bit key
-  has already been factored.
-- It does not fetch `jku`/`x5u` URLs, by design.
-
-## License
-
-MIT. See `LICENSE`.
