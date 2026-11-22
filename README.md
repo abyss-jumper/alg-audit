@@ -61,7 +61,7 @@ proof of concept (do not use against systems you do not own)
 ## Install
 
 ```bash
-git clone https://github.com/YOURNAME/alg-audit
+git clone https://github.com/abyss-jumper/alg-audit
 cd alg-audit
 python -m pip install -e .
 alg-audit jwks fixtures/jwks_weak.json     # offline demo
